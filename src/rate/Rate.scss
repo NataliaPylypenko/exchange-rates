@@ -1,0 +1,46 @@
+@import '../media';
+.rate {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .block {
+        padding: 20px 15px;
+        border: 1px solid #747474;
+        background: #ededed;
+        margin: 15px;
+        div {
+            margin-bottom: 20px;
+        }
+    }
+    .flex-item {
+        width: calc(25% - 30px);
+        @media #{$tablet}{
+            width: calc(50% - 30px);
+        }
+        @media #{$mobile}{
+            width: calc(100% - 30px);
+        }
+    }
+
+}
+.currency {
+    &-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    &-in,
+    &-out {
+        font-size: 1.3rem;
+        text-align: right;
+        display: flex;
+        p {
+            margin-right: auto;
+        }
+    }
+}
+
+
+

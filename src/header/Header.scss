@@ -1,0 +1,26 @@
+header {
+    background: #2c1a56;
+    height: 175px;
+    text-align: left;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.top-bar {
+    padding: 0;
+    font-size: 12px;
+    border-bottom: 2px solid #1B0945;
+    min-height: 40px;
+}
+.main-header {
+    padding: 20px 20px 25px;
+}
+.site-title {
+    color: #fff
+}
+.header-nav {
+    background: #1B0945;
+}

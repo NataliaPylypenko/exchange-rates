@@ -1,0 +1,16 @@
+@import '../media';
+.App {
+  height: 100%;
+  text-align: center;
+}
+
+.main-content {
+  height: auto;
+  min-height: 100%;
+  padding-top: 235px;
+  padding-bottom: 260px;
+  @media #{$mobile}{
+    padding-top: 205px;
+    padding-bottom: 405px;
+  }
+}

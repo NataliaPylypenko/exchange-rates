@@ -1,0 +1,26 @@
+@import '../media';
+nav {
+    margin-right: -15px;
+    margin-left: -15px;
+    li {
+        display: inline-block;
+        padding: 15px 10px;
+        @media #{$mobile}{
+            font-size: 14px;
+            padding: 15px;
+        }
+        a,
+        a:visited {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+        a.active,
+        &:hover a{
+            color: darkorange;
+        }
+    }
+}
+
+
+
