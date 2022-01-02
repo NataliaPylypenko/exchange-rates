@@ -7,7 +7,7 @@ import './media.scss';
 import App from './app/App';
 
 let nav = {
-    "/" : "Главная",
+    "exchange-rates" : "Главная",
     currency : "Пункты обмена",
     contacts : "Контакты",
 }

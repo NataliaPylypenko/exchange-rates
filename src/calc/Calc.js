@@ -22,7 +22,7 @@ class Calc extends React.Component {
         let radio = elements['radio'].value;
         let countCurrency = elements['count-currency'].value;
         let typeCurrency = elements['type-currency'].value;
-        if (radio === 0) {
+        if (radio == 0) {
             this.setState({
                 result : (countCurrency / (this.state.rate[typeCurrency] / 0.97) ).toFixed(2)
             })
@@ -44,8 +44,8 @@ class Calc extends React.Component {
 
                     <div>
                         <form onSubmit={this.calcRate}>
-                            <div className="a">
-                                <label><input type="radio" name="radio" defaultValue="0" /> продать</label>
+                            <div className="calc-radio">
+                                <label><input type="radio" name="radio" defaultValue="0" defaultChecked /> продать</label>
                                 <label><input type="radio" name="radio" defaultValue="1" /> купить</label>
                             </div>
 

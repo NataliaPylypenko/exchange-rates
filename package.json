@@ -2,7 +2,7 @@
   "name": "exchange-rates",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nataliapylypenko.github.io/currency/",
+  "homepage": "https://nataliapylypenko.github.io/exchange-rates/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

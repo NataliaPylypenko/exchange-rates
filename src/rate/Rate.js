@@ -8,17 +8,17 @@ class Rate extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // 'date': '',
-            // 'currencyRate' : {}
-            'date': '04.07.2022',
-            'currencyRate' : {'USD': 1.1139, 'RUB': 71.0786, 'CAD': 7.4682, 'PHP': 56.286}
+            'date': '',
+            'currencyRate' : {}
+            // 'date': '04.07.2022',
+            // 'currencyRate' : {'USD': 1.1139, 'RUB': 71.0786, 'CAD': 7.4682, 'PHP': 56.286}
         }
         this.currency = ['USD', 'RUB', 'CAD', 'PHP'];
         this.getRate();
     }
 
     getRate = () => {
-        fetch('https://api.exchangeratesapi.io/latest')
+        fetch('http://api.exchangeratesapi.io/v1/latest?access_key=66fcd11a9a1685d0d548e3a35c0345ef')
             .then(data => {
                 return data.json();
             })

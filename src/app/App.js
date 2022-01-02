@@ -23,7 +23,7 @@ class App extends React.Component {
             <main className="main-content">
 
                 <Routes>
-                  <Route exact path="/" element={<Rate />} />
+                  <Route exact path="/exchange-rates" element={<Rate />} />
                   <Route exact path="/currency" element={<Currency />} />
                   <Route exact path="/contacts" element={<Contacts />} />
                   <Route path="*" element={<Error />} />
