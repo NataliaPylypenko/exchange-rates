@@ -10,24 +10,31 @@ class Rate extends React.Component {
         this.state = {
             'date': '',
             'currencyRate' : {}
-            // 'date': '04.07.2022',
+            // 'date': '31.02.2202',
             // 'currencyRate' : {'USD': 1.1139, 'RUB': 71.0786, 'CAD': 7.4682, 'PHP': 56.286}
         }
-        this.currency = ['USD', 'RUB', 'CAD', 'PHP'];
+        this.currency = ['RUB', 'PLN', 'USD', 'CAD'];
         this.getRate();
     }
 
     getRate = () => {
-        fetch('http://api.exchangeratesapi.io/v1/latest?access_key=66fcd11a9a1685d0d548e3a35c0345ef')
+        fetch('https://freecurrencyapi.net/api/v2/latest?apikey=408379a0-6bd7-11ec-a1a7-0d75d5c7e490&base_currency=UAH')
             .then(data => {
                 return data.json();
             })
             .then(data => {
-                this.setState({ date : data.date });
+                let now = new Date();
+
+                let date = now.getDate();
+                let month = now.getMonth() + 1;
+                let year = now.getFullYear();
+                let res = `${date}.${month}.${year}`;
+
+                this.setState({ date : res});
 
                 let result = {};
                 for (let i = 0; i < this.currency.length; i++) {
-                    result[this.currency[i]] = data.rates[this.currency[i]];
+                    result[this.currency[i]] = data.data[this.currency[i]];
                 }
                 this.setState({ currencyRate : result });
             })
@@ -46,11 +53,11 @@ class Rate extends React.Component {
                                     <div className="currency-name">{ elem }</div>
                                     <div className="currency-in">
                                         <p>Покупка</p>
-                                        { (this.state.currencyRate[elem] * 0.97).toFixed(2) }
+                                        { (this.state.currencyRate[elem] * 0.97).toFixed(4) }
                                     </div>
                                     <div className="currency-out">
                                         <p>Продажa</p>
-                                        { (this.state.currencyRate[elem] / 0.97).toFixed(2) }
+                                        { (this.state.currencyRate[elem] / 0.97).toFixed(4) }
                                     </div>
                                 </div>
                             )

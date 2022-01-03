@@ -62,7 +62,7 @@ class Calc extends React.Component {
                     <div>
                         <h4>Результат</h4>
                         <ul className="calc-res">
-                            <li>EUR { this.state.result }</li>
+                            <li>UAH { this.state.result }</li>
                         </ul>
                     </div>
                 </div>
